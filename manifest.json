@@ -1,0 +1,13 @@
+{
+  "version": "0.15.5",
+  "stacks": {
+    "test-2": {
+      "name": "test-2",
+      "constructPath": "test-2",
+      "workingDirectory": "stacks/test-2",
+      "synthesizedStackPath": "stacks/test-2/cdk.tf.json",
+      "annotations": [],
+      "dependencies": []
+    }
+  }
+}

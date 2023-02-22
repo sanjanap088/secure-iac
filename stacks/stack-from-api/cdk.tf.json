@@ -1,0 +1,62 @@
+{
+  "//": {
+    "metadata": {
+      "backend": "local",
+      "stackName": "stack-from-api",
+      "version": "0.15.5"
+    },
+    "outputs": {
+    }
+  },
+  "provider": {
+    "aws": [
+      {
+        "region": "us-west-1"
+      }
+    ]
+  },
+  "resource": {
+    "aws_s3_access_point": {
+      "stackfromapi_mys3accessconfig_449394EE": {
+        "//": {
+          "metadata": {
+            "path": "stack-from-api/my_s3_access_config",
+            "uniqueId": "stackfromapi_mys3accessconfig_449394EE"
+          }
+        },
+        "bucket": "${aws_s3_bucket.stackfromapi_s3backendbucket_FC0124B6.bucket}",
+        "name": "my_s3_access_config",
+        "public_access_block_configuration": {
+          "block_public_acls": true,
+          "block_public_policy": true,
+          "ignore_public_acls": true,
+          "restrict_public_buckets": true
+        }
+      }
+    },
+    "aws_s3_bucket": {
+      "stackfromapi_s3backendbucket_FC0124B6": {
+        "//": {
+          "metadata": {
+            "path": "stack-from-api/s3_backend_bucket",
+            "uniqueId": "stackfromapi_s3backendbucket_FC0124B6"
+          }
+        },
+        "bucket": "cdktf-remote-backend-2"
+      }
+    }
+  },
+  "terraform": {
+    "backend": {
+      "local": {
+        "path": "/Users/sanjanaprasanna/workspace-secure-iac/secure-iac/web/terraform.stack-from-api.tfstate"
+      }
+    },
+    "required_providers": {
+      "aws": {
+        "source": "aws",
+        "version": "4.55.0"
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "//": {
+    "metadata": {
+      "backend": "local",
+      "stackName": "test-2",
+      "version": "0.15.5"
+    },
+    "outputs": {
+    }
+  },
+  "provider": {
+    "aws": [
+      {
+        "region": "us-west-1"
+      }
+    ]
+  },
+  "resource": {
+    "aws_s3_access_point": {
+      "test2_uniqueconfignames3accesspoint_4CB328DF": {
+        "//": {
+          "metadata": {
+            "path": "test-2/unique_config_name_s3_access_point",
+            "uniqueId": "test2_uniqueconfignames3accesspoint_4CB328DF"
+          }
+        },
+        "bucket": "${aws_s3_bucket.test2_uniqueconfignames3_B9E2D913.id}",
+        "name": "access_point_name",
+        "public_access_block_configuration": {
+          "block_public_acls": true,
+          "block_public_policy": true,
+          "ignore_public_acls": true,
+          "restrict_public_buckets": true
+        }
+      }
+    },
+    "aws_s3_bucket": {
+      "test2_uniqueconfignames3_B9E2D913": {
+        "//": {
+          "metadata": {
+            "path": "test-2/unique_config_name_s3",
+            "uniqueId": "test2_uniqueconfignames3_B9E2D913"
+          }
+        },
+        "bucket": "bucket-name"
+      }
+    }
+  },
+  "terraform": {
+    "backend": {
+      "local": {
+        "path": "/Users/sanjanaprasanna/workspace-secure-iac/secure-iac/web/terraform.test-2.tfstate"
+      }
+    },
+    "required_providers": {
+      "aws": {
+        "source": "aws",
+        "version": "4.55.0"
+      }
+    }
+  }
+}
