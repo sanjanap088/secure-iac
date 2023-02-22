@@ -19,12 +19,12 @@ class MyAwsStack(TerraformStack):
         super().__init__(scope, ns)
         AwsProvider(self, "AWS", region="us-west-1")
 
-    def configure_instance(self, label="compute", instance_type="t2.micro", ami_id="ami-01456a894f71116f2"):
-        Instance(self, id_=label,
-                 ami=ami_id,
-                 instance_type=instance_type,
-                 )
-        return self
+    # def configure_instance(self, label="compute", instance_type="t2.micro", ami_id="ami-01456a894f71116f2"):
+    #     Instance(self, id_=label,
+    #              ami=ami_id,
+    #              instance_type=instance_type,
+    #              )
+    #     return self
 
     # def configure_s3_backend(self):
     #     S3Backend(self,
@@ -37,8 +37,8 @@ class MyAwsStack(TerraformStack):
     #               )
     #     return self
 
-    def configure_s3_bucket(self):
-        return self
+    # def configure_s3_bucket(self):
+    #     return self
 
 
 class MyAwsStackBuilder:
